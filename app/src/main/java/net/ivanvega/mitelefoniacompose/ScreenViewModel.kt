@@ -1,17 +1,19 @@
-package net.ivanvega.mitelefoniacompose
+    package net.ivanvega.mitelefoniacompose
 
-import android.telephony.SmsManager
-import androidx.lifecycle.ViewModel
+    import android.telephony.SmsManager
+    import android.util.Log
+    import androidx.lifecycle.ViewModel
 
-class ScreenViewModel: ViewModel() {
+    class ScreenViewModel: ViewModel() {
 
-    fun sendSMS(){
-        val smsManage = SmsManager.getDefault()
-        smsManage.sendTextMessage("4451234567",
-            null,
-            "CUerpo del mensahe de texto",null,null
-            )
+        fun sendSMS(){
+            Log.d("Mensaje de respuesta","Se envio")
+            val smsManage = SmsManager.getDefault()
+            smsManage.sendTextMessage("4451065275",
+                null,
+                "No puedo contestar en este momento",null,null
+                )
+
+        }
 
     }
-
-}
